@@ -3,14 +3,15 @@ const path = require("path");
 
 const app = express();
 
-// Mettez à jour le chemin ici pour inclure "browser"
+// Spécifiez le bon chemin pour les fichiers statiques
 app.use(express.static(path.join(__dirname, 'dist', 'assignement-app', 'browser')));
 
-// Modifier la ligne suivante pour pointer vers le bon répertoire contenant index.html
+// Assurez-vous que le fichier index.html est bien servi depuis le bon dossier
 app.get('/*', function(req, res) {
   res.sendFile(path.join(__dirname, 'dist', 'assignement-app', 'browser', 'index.html'));
 });
 
-app.listen(process.env.PORT || 8081, () => {
-  console.log("Server is running on port 8081");
+// Démarrer le serveur
+app.listen(process.env.PORT || 3000, () => {
+  console.log("Server is running on port 3000");
 });
