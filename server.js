@@ -4,7 +4,7 @@ const path = require("path");
 const app = express();
 
 // Spécifiez le bon chemin pour les fichiers statiques
-app.use(express.static(path.join(__dirname, 'dist', 'assignement-app', 'browser')));
+app.use(express.static(path.join(__dirname, 'dist', 'assignement-app')));
 
 // Assurez-vous que le fichier index.html est bien servi depuis le bon dossier
 app.get('/*', function(req, res) {
