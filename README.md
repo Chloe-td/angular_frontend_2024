@@ -1,53 +1,27 @@
-[![Open in Codespaces](https://classroom.github.com/assets/launch-codespace-2972f46106e565e64193e422d61a12cf1da4916b45550586e14ef0a7c637dd04.svg)](https://classroom.github.com/open-in-codespaces?assignment_repo_id=16035974)
-# Angular-start
-## Michel Buffa, Leo Donati, Université Côte d'Azur 
-Repository de démarrage pour vos TP de Angular
+# AssignementApp
 
-C'est dans ce repository que vous allez créer votre projet Angular qui va évoluer tout au long du semestre.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.4.
 
-Vous devez donc modifier ce README en ajoutant votre nom et l'avancement de votre projet, ainsi que d'éventuelles difficultés que vous avez eues ou des bonus que vous avez ajoutés par rapport à ce qui vous est demandé.
+## Development server
 
-* Si vous utilisez le github Codespace, alors dans votre machine virtuelle `npm`, `node` et `angular/CLI` sont déjà installés.
-* Pour cloner en local ce repository, il faut :
-   1. avoir installé `git` (ou `gitbash`) sur votre machine
-   1. créer un répertoire de travail et s'y déplacer
-   1. cloner le repository distant
-```bash
-git clone nom-du-repository
-```
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
+## Code scaffolding
 
+Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-### Pour vérifier que l'installation est complète
+## Build
 
-```bash 
-npm --version
-node --version
-ng version
-```
+Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
-### Chaque fois que vous modifiez votre code 
+## Running unit tests
 
-```bash
-git pull            #pour synchroniser votre repo local avec le repo de github 
-git add -A          #pour informer git de suivre tous les fichiers présents dans le répertoire
-git commit -m "message descriptif"      #pour intégrer dans git les dernières modifications faites     
-git push            #pour synchroniser le repo github avec le repo local
-```
+Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-### Pour ajouter un tag (une étiquette) à l'état courant du repository sur github
+## Running end-to-end tests
 
-Une étiquette TPXX doit être ajoutée à la fin de chaque séance de TP pour voir l'évolution progressif de votre travail.
+Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
 
-```bash
-git tag NomEtiquette
-git push --tags
-```
+## Further help
 
-
-
-
-
-
-
-
+To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
