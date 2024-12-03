@@ -1,7 +1,7 @@
 {
-  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.d.json",
   "version": 1,
-  "newProjectRoot": "projects",
+  "newProjectRoot": "project",
   "projects": {
     "assignement-app": {
       "projectType": "application",
