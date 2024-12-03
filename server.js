@@ -1,17 +1,14 @@
+//Install express server
 const express = require("express");
 const path = require("path");
 
 const app = express();
 
-// Spécifiez le bon chemin pour les fichiers statiques
-app.use(express.static(path.join(__dirname, 'dist', 'assignement-app')));
+// Serve only the static files form the dist directory
+app.use(express.static(__dirname + "/dist/assignement-app/"));
 
-// Assurez-vous que le fichier index.html est bien servi depuis le bon dossier
-app.get('/*', function(req, res) {
-  res.sendFile(path.join(__dirname, 'dist', 'assignement-app', 'browser', 'index.html'));
+app.get("/*", function (req, res) {
+ res.sendFile(path.join(__dirname + "/dist/assignement-app/index.html"));
 });
-
-// Démarrer le serveur
-app.listen(process.env.PORT || 3000, () => {
-  console.log("Server is running on port 3000");
-});
+// Start the app by listening on the default Heroku port
+app.listen(process.env.PORT || 3000);
