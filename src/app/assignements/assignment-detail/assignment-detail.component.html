@@ -1,0 +1,33 @@
+<mat-card>
+    @if (assignmentTransmis){
+        <mat-card-content>
+        <mat-card-title> {{assignmentTransmis.nom}} </mat-card-title>
+        <mat-card-subtitle>{{assignmentTransmis.dateDeRendu | date: 'dd/MM/yyyy'}}</mat-card-subtitle>
+        <mat-card-actions id="bottom">
+        @if(!assignmentTransmis.rendu){
+            <mat-checkbox (click)="onAssignmentRendu()">
+                    Devoir rendu
+            </mat-checkbox>
+        }
+    
+        <nav>
+            <a>
+                <button mat-stroked-button color="primary"
+                (click)="onClickEdit()"
+                [disabled]="!isAdmin()">
+                    Edit
+                </button>
+            </a>
+        </nav>
+    
+    
+        
+        <button mat-flat-button color="warn" 
+        (click)="onDelete()"
+        [disabled]="!isAdmin()">
+            DELETE ME
+        </button>
+        </mat-card-actions>
+        </mat-card-content>
+    }
+    </mat-card>

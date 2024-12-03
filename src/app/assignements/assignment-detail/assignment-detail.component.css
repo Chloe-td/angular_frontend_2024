@@ -1,0 +1,10 @@
+.deleteBtn {
+    margin-left: auto;
+    align-self: flex-end;
+}
+
+#bottom{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}

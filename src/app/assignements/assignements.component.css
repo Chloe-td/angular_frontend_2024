@@ -1,0 +1,44 @@
+.rendu {
+    color: green;
+}
+
+.nonRendu {
+    color: red;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+.ajouterBtn {
+    align-self: flex-end;
+}
+
+.pagination-buttons {
+    display: flex;
+    justify-content: center;
+}
+
+.pagination-info {
+    display: flex;
+    justify-content: center;
+    font-style: normal;
+    font-size: smaller;
+    color: grey;
+}
+
+.page-size-selector {
+    display: flex;
+    justify-content: center;  
+    align-items: center;     
+    font-style: normal;
+    font-size: smaller;
+    color: grey;          
+}
+
+.page-size-selector {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+

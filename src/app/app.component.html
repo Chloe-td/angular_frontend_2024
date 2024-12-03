@@ -1,0 +1,46 @@
+<div class="container">
+  
+  <!--
+  <mat-slide-toggle color="primary" (click)="login()">Login</mat-slide-toggle>
+  -->
+  
+  <mat-toolbar>
+      <button mat-icon-button class="menu-icon" aria-label="icon-button with menu icon" (click)="opened=!opened">
+        <mat-icon>menu</mat-icon>
+      </button>
+      <span><h1>
+        <nav>
+          <a routerLink="/home">{{title}}</a>
+        </nav>
+      </h1></span>
+      <span class="example-spacer"></span>
+      <button mat-icon-button class="home-icon" aria-label="icon-button with home icon" routerLink="/home">
+        <mat-icon>home</mat-icon>
+      </button>
+      @if(!isLogged()){
+        <button mat-icon-button class="login-icon" aria-label="icon-button with login icon" routerLink="/login">
+          <mat-icon>login</mat-icon>
+        </button>
+      }
+      @else{
+        <button mat-icon-button class="logout-icon" aria-label="icon-button with logout icon" (click)="logout()">
+          <mat-icon>logout</mat-icon>
+        </button>
+      }
+  </mat-toolbar>
+    
+  <mat-drawer-container class="container">
+      <mat-drawer #drawer mode="side" [opened]="opened">
+          <mat-nav-list>
+              <a mat-list-item routerLink="assignments">Liste des devoirs</a>
+              <a mat-list-item routerLink="add" >Ajout d'un devoir</a>
+             <!--  <a mat-list-item >Suppression d'un devoir</a> -->
+             <!-- <a mat-list-item  (click)="peuplerBD()">Génération de données de test</a> -->
+          </mat-nav-list>
+      </mat-drawer>
+      <mat-drawer-content>
+        <router-outlet></router-outlet>
+      </mat-drawer-content>
+  </mat-drawer-container>
+  
+  </div>
